@@ -33,7 +33,13 @@ Contributions to this project are welcome! You can help by adding more examples,
 This project is licensed under the [MIT License](LICENSE). See the `LICENSE` file for more details.
 
 ## Contact
-For any questions or feedback, please reach out via the GitHub Issues page or contact [abdelali.dousbah@outlook.com](mailto:abdelali.dousbah@outlook.com).
+For any questions or feedback, please reach out via the GitHub Issues page or contact me, Abdelali Dousbah, at [abdelali.dousbah@outlook.com](mailto:abdelali.dousbah@outlook.com).
+
+## Certification Badge
+I am proud to have earned the Canonical Ubuntu Essentials CUE01 Linux certification badge. You can view my badge here: [Canonical CUE01 Linux Certification Badge](https://www.credly.com/badges/625e2ca8-77ae-4e81-becd-8266c7128281/public_url).
+
+## Useful Links
+- [Canonical Ubuntu Credentials](https://ubuntu.com/credentials)
 
 ---
 
