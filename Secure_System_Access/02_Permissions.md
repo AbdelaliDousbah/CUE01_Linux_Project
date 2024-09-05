@@ -205,6 +205,35 @@ By understanding and using `chmod`, administrators can control who has access to
 
 ## Ownership and Group Management
 
+In Linux, every file and directory is associated with an owner (user) and a group. Ownership defines who can modify, access, or execute a file or directory. The `chown` and `chgrp` commands are used to change the owner and group of files and directories.
+
+### **Checking Ownership**
+
+As discussed earlier, the `ls -l` command displays the owner and group for each file or directory.
+
+**Example:**  
+Run the `ls -l` command to check file ownership and group.
+
+### **Changing File Ownership with `chown`**
+
+The `chown` command changes the owner and/or group of a file or directory. The basic syntax is:
+
+`chown [OPTION] OWNER[:GROUP] FILE`
+
+#### **Examples:**
+
+1. **Change the group of a file:**
+  ```bash
+   $ chown newuser file.txt
+  ```
+
+2. **Change the group of a directory and its contents recursively:**  
+  ```bash
+   $ chown newuser:newgroup file.txt
+  ```
+
+By managing file ownership and groups, Linux administrators can control who has access to files and directories at a more granular level, ensuring proper separation of responsibilities and data security.
+
 ## Special Permissions
 
 ## Real-World Scenarios
