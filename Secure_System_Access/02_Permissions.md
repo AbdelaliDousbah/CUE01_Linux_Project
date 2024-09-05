@@ -66,6 +66,61 @@ This structure is crucial for controlling access to files and directories, ensur
 
 ## How to Check Permissions
 
+In Linux, permissions for files and directories can be checked using various commands, providing detailed insights into their access control settings. One of the most commonly used commands for this purpose is `ls` with the `-l` option.
+
+### Using the `ls -l` Command
+
+The `ls -l` command lists the contents of a directory in long format, displaying detailed information about files and directories, including their permissions. The output looks something like this:
+
+```bash
+$ ls -l
+total 12
+-rwxr-xr--  1 user group  4096 Sep  5 12:34 example.sh
+drwxr-xr-x  2 user group  4096 Sep  5 10:22 project
+lrwxrwxrwx  1 user group    11 Sep  5 13:45 shortcut -> /tmp/file
+```
+
+Each line of the output contains the following fields:
+
+1. **Permission string** (e.g., `-rwxr-xr--`): Represents the type of file and the permissions for owner, group, and others.
+2. **Number of links** (e.g., `1`): The number of hard links pointing to the file.
+3. **Owner** (e.g., `user`): The user who owns the file or directory.
+4. **Group** (e.g., `group`): The group that owns the file or directory.
+5. **File size** (e.g., `4096`): The size of the file in bytes.
+6. **Timestamp** (e.g., `Sep 5 12:34`): The last modification time of the file.
+7. **Filename** (e.g., `example.sh`): The name of the file or directory.
+
+### Understanding the Permission String
+
+The first column (permission string) gives detailed information about the type and permissions. For example:
+
+```bash
+-rwxr-xr--
+```
+
+- The first character (`-`) indicates that this is a regular file.
+- The next three characters (`rwx`) are the permissions for the file's owner (read, write, execute).
+- The next three characters (`r-x`) are the permissions for the group (read, execute).
+- The final three characters (`r--`) are the permissions for others (read-only).
+
+### Using `stat` to View Permissions and Metadata
+
+The stat command provides a more detailed view of file metadata, including permissions, timestamps, and more.
+
+```bash
+$ stat example.sh
+  File: example.sh
+  Size: 4096       Blocks: 8          IO Block: 4096   regular file
+Device: 803h/2051d    Inode: 1024008     Links: 1
+Access: (0755/-rwxr-xr--)  Uid: ( 1000/   user)   Gid: ( 1000/   group)
+Access: 2024-09-05 12:34:56.000000000 +0000
+Modify: 2024-09-05 12:34:56.000000000 +0000
+Change: 2024-09-05 12:34:56.000000000 +0000
+```
+
+- **Access**: Shows the permission string (`0755`) and its symbolic representation (`-rwxr-xr--`).
+- **Uid and Gid**: Show the user and group IDs, along with their names.
+
 ## Modifying Permissions
 
 ## Ownership and Group Management
