@@ -123,6 +123,86 @@ Change: 2024-09-05 12:34:56.000000000 +0000
 
 ## Modifying Permissions
 
+In Linux, permissions can be modified using the `chmod` command. This command allows the owner of a file or directory to change the permissions for the owner, group, and others. Permissions can be specified using either **symbolic** or **octal** notation.
+
+### **Symbolic Notation**
+
+In symbolic notation, permissions are changed using combinations of the following symbols:
+
+- **u**: User (Owner)
+- **g**: Group
+- **o**: Others
+- **a**: All (User, Group, Others)
+- **+**: Adds a permission
+- **-**: Removes a permission
+- **=**: Sets a permission
+
+#### **Examples:**
+
+1. **Add execute permission for the owner:**
+   ```bash
+   $ chmod u+x filename
+   ```
+2. **Remove write permission for the group:**
+   ```bash
+   $ chmod g-w filename
+   ```
+3. **Give read and execute permission to others:**
+   ```bash
+   $ chmod o+rx filename
+   ```
+4. **Set read, write, and execute permission for all users:**
+   ```bash
+   $ chmod a+rwx filename
+   ```
+5. **Remove all permissions for others:**
+   ```bash
+   $ chmod o= filename
+   ```
+### **Octal Notation**
+
+In octal (numeric) notation, permissions are represented by a three-digit number, where each digit corresponds to the permissions for the owner, group, and others. The value of each digit is calculated by adding the values for read, write, and execute permissions:
+
+- **Read (r)**: `4`
+- **Write (w)**: `2`
+- **Execute (x)**: `1`
+
+#### Examples:
+
+1. **Set read, write, and execute for the owner; read and execute for the group; read-only for others:**
+
+    ```bash
+    $ chmod 755 filename
+    ```
+##### Explanation:
+
+- **Owner (7)**: `4` (read) + `2` (write) + `1` (execute) = `7`
+- **Group (5)**: `4` (read) + `0` (write) + `1` (execute) = `5`
+- **Others (4)**: `4` (read) + `0` (write) + `0` (execute) = `4`
+
+2. **Set read and write for the owner; read-only for group and others:**
+
+    ```bash
+    $ chmod 644 filename
+    ```
+3. **Set full permissions (read, write, execute) for everyone:**
+
+    ```bash
+   $ chmod 777 filename
+    ```
+    
+### **Recursive Permission Changes**
+
+To modify permissions for a directory and all of its contents, the `-R` (recursive) option can be used:
+
+```bash
+$ chmod -R 755 directory
+```
+
+This command changes the permissions of all files and subdirectories within `directory/`.
+
+By understanding and using `chmod`, administrators can control who has access to files and directories and what kind of actions they are allowed to perform, ensuring proper security and functionality.
+
 ## Ownership and Group Management
 
 ## Special Permissions
