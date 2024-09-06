@@ -1,20 +1,11 @@
-## Introduction
-- Brief overview of SSH key pairs and their importance
+# 01 - Introduction to SSH Key Pairs
+- **Overview of SSH Key Pairs**
+- **Practical Approach**
 
-## Generating an SSH Key Pair
-- Basic syntax of `ssh-keygen`
+# 02 - Scenario: Setting Up Secure SSH Access for a Remote Server
+- **Step 1: Generate the SSH Key Pair**
+- **Step 2: Copy the Public Key to the Remote Server**
+- **Step 3: Verify SSH Key Authentication**
+- **Step 4: Secure the Server (Optional)**
 
-### Common Arguments and Options
-- **`-t`**: Key type
-- **`-b`**: Number of bits
-- **`-C`**: Comment/label
-- **`-f`**: Output file
-- **`-N`**: Passphrase
-- **`-q`**: Quiet mode
-- **`-y`**: Extract public key
-
-## Example Usage
-- Example command with options
-
-## Conclusion
-- Summary of key options and their uses
+# 03 - Conclusion
